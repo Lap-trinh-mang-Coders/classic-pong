@@ -17,10 +17,12 @@ FPS = 60
 SERVER = "127.0.0.1"
 PORT = 5555
 
+
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Multiplayer Pong")
 clock = pygame.time.Clock()
+
 
 game_state = {}
 my_id = -1
@@ -59,6 +61,7 @@ def draw_game(screen, state):
         screen.blit(winner_text, text_rect)
         
     pygame.display.update()
+
 
 def draw_menu(screen, input_text, difficulty, player_id, status_text=""):
     screen.fill(BLACK)
